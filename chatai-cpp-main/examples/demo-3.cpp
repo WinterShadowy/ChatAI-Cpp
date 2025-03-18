@@ -3,8 +3,8 @@
 #include <iostream>
 #include <vector>
 
-std::string api_key = "";
-std::string url = "";
+std::string api_key = "YOUR_API_KEY";
+std::string url = "YOUR_RL";
 std::string model = "gpt-4o-mini-2024-07-18"; // gpt-3.5-turbo...... 
 using namespace std;
 
