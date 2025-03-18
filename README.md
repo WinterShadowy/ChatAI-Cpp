@@ -6,7 +6,7 @@
 ## Requirements
 No special requirement. You should already have these :
 1. C++11/C++14/C++17/C++20 compatible compiler
-2. libcurl (check Install curl to make sure you have the development package)
+2. [libcurl](https://curl.se/libcurl/) (check [Install curl](https://everything.curl.dev/get) to make sure you have the development package)
 
 ## Installation
 1. The library consists of three files: include/openai/openai.hpp,include/openai/nlohmann/json.hpp, include/openai/openai-chat.hpp. 
