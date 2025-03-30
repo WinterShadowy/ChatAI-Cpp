@@ -10,7 +10,7 @@
 std::string api_key = "YOUR_API_KEY";
 std::string url = "YOUR_URL";
 std::string model = "gpt-3.5-turbo";
-// ���ڹ��� (Window process function)
+// 窗口过程函数 (Window process function)
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam) 
 {
     static HWND hEdit, hStatic, hButton;
@@ -19,19 +19,19 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lPara
     {
     case WM_CREATE: 
     {
-        // ������һ���༭�� (Create an edit box)
+        // 创建一个Edit (Create an edit box)
         hEdit = CreateWindowEx(0, L"EDIT", NULL,
             WS_CHILD | WS_VISIBLE | WS_BORDER | ES_AUTOHSCROLL,
             10, 10, 600, 150,
             hwnd, (HMENU)IDC_EDIT, NULL, NULL);
 
-        // ����һ���ı���ʾ�� (Create a text display box)
+        // 创建一个Static，用于显示(Create a text display box)
         hStatic = CreateWindowEx(0, L"Static", NULL,
             WS_CHILD | WS_VISIBLE | WS_BORDER,
             10, 180, 600, 220,
             hwnd, (HMENU)IDC_STATIC, NULL, NULL);
 
-        // ������ť (create button)
+        // 创建一个Button(create button)
         hButton = CreateWindowEx(0, L"BUTTON", L"ѯ�ʣ�ask��",
             WS_CHILD | WS_VISIBLE,
             630, 10, 100, 25,
@@ -42,7 +42,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lPara
     {
         if (LOWORD(wParam) == IDC_BUTTON) 
         {
-            // ��ȡEDIT�е��ı� (Retrieve text from EDIT)
+            // 获取提问(Retrieve text from EDIT)
             wchar_t buffer[256];
             GetWindowText(hEdit, buffer, sizeof(buffer) / sizeof(wchar_t));
             ChatAI::ChatAI ai(api_key, url, model);
@@ -63,7 +63,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lPara
 // WinMain
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
-    // ע�ᴰ���� (Register window class)
+    // 注册窗口类 (Register window class)
     WNDCLASS wc = {};
     wc.lpfnWndProc = WindowProc;
     wc.hInstance = hInstance;
@@ -73,14 +73,14 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
     RegisterClass(&wc);
 
-    // �������� (Create window)
+    // 创建窗口 (Create window)
     HWND hwnd = CreateWindowEx(
         0, L"Class_ChatAI", L"ChatAI - Window",
         WS_OVERLAPPEDWINDOW | WS_VISIBLE,
         CW_USEDEFAULT, CW_USEDEFAULT, 750, 450,
         NULL, NULL, hInstance, NULL);
 
-    // ��Ϣѭ�� (Message loop)
+    // 消息循环 (Message loop)
     MSG msg;
     while (GetMessage(&msg, NULL, 0, 0)) 
     {
