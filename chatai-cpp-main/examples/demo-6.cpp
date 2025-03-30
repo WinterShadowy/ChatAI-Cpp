@@ -3,7 +3,7 @@
 #include <iostream>
 #include <vector>
 
-std::string api_key = "YOUR_API_KEYYOUR_API_KEY";
+std::string api_key = "YOUR_API_KEY";
 std::string url = "YOUR_URLYOUR_URL";
 std::string model = "gpt-4o-mini-2024-07-18"; // gpt-3.5-turbo...... 
 using namespace std;
