@@ -15,3 +15,5 @@ No special requirement. You should already have these :
 
 ## Usage
 Please refer to the demo in the reference example folder.
+
+This project is no longer under maintenance. You can take a look at my new related project: [ALL AI Cpp](https://github.com/WinterShadowy/ALL-AI-Cpp)
