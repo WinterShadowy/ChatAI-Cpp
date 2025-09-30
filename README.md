@@ -1,3 +1,10 @@
+## Hint:
+This project is no longer under maintenance.
+
+If you want to implement C++and AI interaction, you can refer to my new project: [ALL-AI-Cpp](https://github.com/WinterShadowy/ALL-AI-Cpp), which has richer and more powerful features.
+
+If it's helpful to you, you can point out a star for my project. Your star is the driving force behind my updates.
+
 ## Basic Overview
 1. A lightweight C++library for interacting with OpenAI, which only supports chatting with AI.
 2. It is based on the Github project: [openai-cpp](https://github.com/olrea/openai-cpp) for secondary development.
